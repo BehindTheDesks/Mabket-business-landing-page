@@ -13,7 +13,7 @@ const heroItems = [
 		description: "Easily add, organize, and track your products in one place. Monitor stock levels in real time and avoid running out of inventory or overselling.",
 		image: "/image/marketDashboard.png",
 		alt: "Manage Orders Faster",
-		color: "bg-[var(--color-sapphire)]"
+		color: "bg-sapphire"
 	},
 	{
 		icon: "/image/Frame2.png",
@@ -21,7 +21,7 @@ const heroItems = [
 		description: "Manage incoming orders smoothly from a single dashboard. Track order status, confirm purchases, and keep your business operations organized.",
 		image: "/image/orderDashboard.png",
 		alt: "Order Management",
-		color: "bg-[var(--color-cool-horizon)]"
+		color: "bg-cool-horizon"
 	},
 	{
 		icon: "/image/Vector3.png",
@@ -29,7 +29,7 @@ const heroItems = [
 		description: "Understand how your business is performing with simple financial insights. Track revenue, monitor profits, and make smarter decisions using clear sales data.",
 		image: "/image/mockup.png",
 		alt: "Cash & Profit Insights",
-		color: "bg-[var(--color-amber-flame)]"
+		color: "bg-amber-flame"
 	},
 	{
 		icon: "/image/Vector4.png",
@@ -37,7 +37,7 @@ const heroItems = [
 		description: "Keep a record of your customers and their purchase history. Build better relationships and understand buying patterns to serve them more effectively.",
 		image: "/image/chat.png",
 		alt: "Customer Management",
-		color: "bg-[var(--color-amber-flame)]"
+		color: "bg-amber-flame"
 	},
 	{
 		icon: "/image/Vector5.png",
@@ -111,17 +111,17 @@ const Hero = () => {
 							</div>
 
 							<div className="space-y-4">
-								<h2 className="font-display text-4xl font-black leading-tight md:text-5xl lg:text-6xl text-[var(--color-carbon-black)] uppercase">
+								<h2 className="font-display text-4xl font-black leading-tight md:text-5xl lg:text-6xl text-carbon-black uppercase">
 									{item.title}
 								</h2>
-								<p className="max-w-lg text-lg leading-relaxed text-[var(--color-carbon-black)] font-medium opacity-90 md:text-xl">
+								<p className="max-w-lg text-lg leading-relaxed text-carbon-black font-medium opacity-90 md:text-xl">
 									{item.description}
 								</p>
 							</div>
 						</div>
 
 						<div className={`img-col group relative w-full md:w-1/2 rounded-[40px] ${item.color} p-6 brutalist-border brutalist-shadow h-80 sm:h-96 md:h-[450px]`}>
-							<div className="w-full h-full rounded-[24px] overflow-hidden border-2 border-[var(--color-carbon-black)] bg-white">
+							<div className="w-full h-full rounded-[24px] overflow-hidden border-2 border-carbon-black bg-white">
 								{/* eslint-disable-next-line @next/next/no-img-element */}
 								<img
 									src={item.image}
@@ -130,7 +130,7 @@ const Hero = () => {
 								/>
 							</div>
 							{/* Playful accent sticker */}
-							<div className="absolute -bottom-6 -left-6 z-20 bg-[var(--color-carbon-black)] px-4 py-2 rounded-xl text-[var(--color-amber-flame)] font-display font-bold rotate-[-5deg] border-2 border-white shadow-lg">
+							<div className="absolute -bottom-6 -left-6 z-20 bg-carbon-black px-4 py-2 rounded-xl text-amber-flame font-display font-bold rotate-[-5deg] border-2 border-white shadow-lg">
 								<p className="text-sm tracking-wider uppercase">MABKET</p>
 							</div>
 						</div>

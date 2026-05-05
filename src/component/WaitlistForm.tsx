@@ -169,10 +169,10 @@ export default function WaitlistForm() {
     }
   };
 
-  const inputClass = "w-full rounded-2xl brutalist-border px-4 py-3 text-lg font-medium text-[var(--color-carbon-black)] outline-none focus:ring-4 focus:ring-[var(--color-cool-horizon)] transition-all";
+  const inputClass = "w-full rounded-2xl brutalist-border px-4 py-3 text-lg font-medium text-carbon-black outline-none focus:ring-4 focus:ring-cool-horizon transition-all";
 
   return (
-    <div className="relative mx-auto w-full max-w-md rounded-[2rem] brutalist-card bg-white p-6 sm:p-8 z-20 mb-20 text-left overflow-hidden h-[240px] sm:h-[260px] flex flex-col justify-center">
+    <div className="relative mx-auto w-full max-w-md rounded-[2rem] brutalist-card bg-white p-6 sm:p-8 z-20 mb-20 text-left overflow-hidden min-h-[300px] sm:min-h-[260px] flex flex-col justify-center">
       
       {/* Progress Bar */}
       <div className="absolute top-0 left-0 w-full h-3 bg-gray-100 border-b-2 border-[var(--color-carbon-black)]">
@@ -187,10 +187,10 @@ export default function WaitlistForm() {
         {/* STEP 1: EMAIL */}
         {step === 1 && (
           <div className="absolute inset-0 flex flex-col justify-center">
-            <h3 className="font-display text-2xl font-bold mb-4 text-[var(--color-carbon-black)]">
+            <h3 className="font-display text-2xl font-bold mb-4 text-carbon-black">
               Drop your email 💌
             </h3>
-            <form onSubmit={handleNext} className="flex gap-2">
+            <form onSubmit={handleNext} className="flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
                 placeholder="you@awesome.com"
@@ -201,7 +201,7 @@ export default function WaitlistForm() {
               />
               <button
                 type="submit"
-                className="rounded-2xl bg-[var(--color-amber-flame)] px-6 font-display font-bold text-lg brutalist-border transition-transform hover:-translate-y-1 active:translate-y-1"
+                className="rounded-2xl bg-[var(--color-amber-flame)] px-8 py-3 font-display font-bold text-lg brutalist-border transition-transform hover:-translate-y-1 active:translate-y-1 w-full sm:w-auto"
               >
                 Next
               </button>
@@ -212,14 +212,15 @@ export default function WaitlistForm() {
         {/* STEP 2: BUSINESS NAME */}
         {step === 2 && (
           <div className="absolute inset-0 flex flex-col justify-center">
-            <h3 className="font-display text-2xl font-bold mb-4 text-[var(--color-carbon-black)]">
+            <h3 className="font-display text-2xl font-bold mb-4 text-carbon-black">
               What&apos;s your business called? 🏪
             </h3>
-            <form onSubmit={handleNext} className="flex gap-2">
+            <form onSubmit={handleNext} className="flex flex-col gap-3">
+              <div className="flex gap-2">
                 <button
                   type="button"
                   onClick={handleBack}
-                  className="rounded-2xl bg-gray-100 px-4 font-display font-bold text-lg brutalist-border transition-transform hover:-translate-y-1 active:translate-y-1"
+                  className="rounded-2xl bg-gray-100 px-4 py-3 font-display font-bold text-lg brutalist-border transition-transform hover:-translate-y-1 active:translate-y-1"
                 >
                   ←
                 </button>
@@ -231,12 +232,13 @@ export default function WaitlistForm() {
                   value={formData.businessName}
                   onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
                 />
-                <button
-                  type="submit"
-                  className="rounded-2xl bg-[var(--color-cool-horizon)] px-6 font-display font-bold text-lg brutalist-border transition-transform hover:-translate-y-1 active:translate-y-1"
-                >
-                  Next
-                </button>
+              </div>
+              <button
+                type="submit"
+                className="rounded-2xl bg-[var(--color-cool-horizon)] px-8 py-3 font-display font-bold text-lg brutalist-border transition-transform hover:-translate-y-1 active:translate-y-1 w-full"
+              >
+                Next
+              </button>
             </form>
           </div>
         )}
@@ -244,40 +246,42 @@ export default function WaitlistForm() {
         {/* STEP 3: INDUSTRY */}
         {step === 3 && (
           <div className="absolute inset-0 flex flex-col justify-center">
-            <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-[var(--color-carbon-black)]">
+            <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-carbon-black">
               What&apos;s your industry? 🎯
             </h3>
             {error && (
               <p className="text-red-500 font-bold mb-2 text-sm">{error}</p>
             )}
             <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-              <div className="flex gap-2">
-                <button
-                  type="button"
-                  onClick={handleBack}
-                  className="rounded-2xl bg-gray-100 px-4 font-display font-bold text-lg brutalist-border transition-transform hover:-translate-y-1 active:translate-y-1"
-                >
-                  ←
-                </button>
-                <select
-                  required
-                  className={inputClass}
-                  value={formData.industry}
-                  onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
-                >
-                  <option value="" disabled>Select an industry...</option>
-                  <option value="Fashion">Fashion & Apparel</option>
-                  <option value="Cosmetics">Cosmetics & Beauty</option>
-                  <option value="Medical">Medical & Health</option>
-                  <option value="Food">Food & Beverage</option>
-                  <option value="Others">Others (Specify)</option>
-                </select>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex gap-2 w-full">
+                  <button
+                    type="button"
+                    onClick={handleBack}
+                    className="rounded-2xl bg-gray-100 px-4 py-3 font-display font-bold text-lg brutalist-border transition-transform hover:-translate-y-1 active:translate-y-1"
+                  >
+                    ←
+                  </button>
+                  <select
+                    required
+                    className={inputClass}
+                    value={formData.industry}
+                    onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
+                  >
+                    <option value="" disabled>Select an industry...</option>
+                    <option value="Fashion">Fashion & Apparel</option>
+                    <option value="Cosmetics">Cosmetics & Beauty</option>
+                    <option value="Medical">Medical & Health</option>
+                    <option value="Food">Food & Beverage</option>
+                    <option value="Others">Others (Specify)</option>
+                  </select>
+                </div>
                 
                 {formData.industry !== "Others" && (
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="rounded-2xl bg-[var(--color-sapphire)] text-white px-6 font-display font-bold text-lg brutalist-border transition-transform hover:-translate-y-1 active:translate-y-1 disabled:opacity-50 disabled:hover:translate-y-0"
+                    className="rounded-2xl bg-[var(--color-sapphire)] text-white px-8 py-3 font-display font-bold text-lg brutalist-border transition-transform hover:-translate-y-1 active:translate-y-1 disabled:opacity-50 disabled:hover:translate-y-0 w-full sm:w-auto"
                   >
                     {isSubmitting ? "..." : "Done!"}
                   </button>
@@ -285,19 +289,19 @@ export default function WaitlistForm() {
               </div>
 
               {formData.industry === "Others" && (
-                <div className="flex gap-2">
+                <div className="flex flex-col sm:flex-row gap-3">
                   <input
                     type="text"
                     placeholder="Specify your industry"
                     required
-                    className={`${inputClass} py-2`}
+                    className={`${inputClass} py-3`}
                     value={formData.otherIndustry}
                     onChange={(e) => setFormData({ ...formData, otherIndustry: e.target.value })}
                   />
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="rounded-2xl bg-[var(--color-sapphire)] text-white px-6 font-display font-bold text-lg brutalist-border transition-transform hover:-translate-y-1 active:translate-y-1 disabled:opacity-50 disabled:hover:translate-y-0"
+                    className="rounded-2xl bg-[var(--color-sapphire)] text-white px-8 py-3 font-display font-bold text-lg brutalist-border transition-transform hover:-translate-y-1 active:translate-y-1 disabled:opacity-50 disabled:hover:translate-y-0 w-full sm:w-auto"
                   >
                     {isSubmitting ? "..." : "Done!"}
                   </button>
@@ -313,10 +317,10 @@ export default function WaitlistForm() {
             <div className="w-16 h-16 bg-[var(--color-amber-flame)] brutalist-border rounded-full flex items-center justify-center mb-4 text-3xl animate-[bounce_2s_infinite]">
               🎉
             </div>
-            <h3 className="font-display text-2xl font-bold text-[var(--color-carbon-black)]">
+            <h3 className="font-display text-2xl font-bold text-carbon-black">
               You&apos;re on the list!
             </h3>
-            <p className="font-medium text-[var(--color-carbon-black)] opacity-80">
+            <p className="font-medium text-carbon-black opacity-80">
               We&apos;ll notify {formData.email} soon!
             </p>
           </div>

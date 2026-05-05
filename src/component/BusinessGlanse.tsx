@@ -11,19 +11,19 @@ const highlightCards = [
     image: "/image/Group8.png",
     title: "No more handwritten stock books",
     description: "Everything digital always up to date, accessible anywhere",
-    color: "bg-[var(--color-amber-flame)]"
+    color: "bg-amber-flame"
   },
   {
     image: "/image/Group9.png",
     title: "Manage your customers better",
     description: "Send your customers birthday wishes, special discounts or announcements.",
-    color: "bg-[var(--color-cool-horizon)]"
+    color: "bg-cool-horizon"
   },
   {
     image: "/image/Group10.png",
     title: "Know your real profit, not guesswork",
     description: "Accurate reports that show what you actually earned",
-    color: "bg-[var(--color-sapphire)]"
+    color: "bg-sapphire"
   },
 ];
 
@@ -49,8 +49,8 @@ const metricCards = [
     label: "Low Stock Items",
     value: "12 items",
     subtext: "Need restocking",
-    subtextClass: "text-[var(--color-amber-flame)]",
-    color: "bg-[var(--color-platinum)]"
+    subtextClass: "text-amber-flame",
+    color: "bg-platinum"
   },
 ];
 
@@ -102,10 +102,10 @@ const BusinessGlanse = () => {
   return (
     <section ref={containerRef} className="mx-auto w-full max-w-6xl px-6 py-24 sm:px-8 lg:px-12">
       <div ref={headerRef} className="mx-auto max-w-3xl text-center mb-16">
-        <h1 className="font-display text-5xl font-black text-[var(--color-carbon-black)] sm:text-6xl uppercase tracking-tight">
+        <h1 className="font-display text-5xl font-black text-carbon-black sm:text-6xl uppercase tracking-tight">
           Business at a glance
         </h1>
-        <p className="mt-6 text-xl font-medium text-[var(--color-carbon-black)] opacity-80">
+        <p className="mt-6 text-xl font-medium text-carbon-black opacity-80">
           Real-time insights that help you make smarter decisions every day, wrapped in a delightful experience.
         </p>
       </div>
@@ -126,10 +126,10 @@ const BusinessGlanse = () => {
               />
             </div>
             <div>
-              <h2 className="font-display text-2xl font-bold text-[var(--color-carbon-black)] leading-tight mb-3">
+              <h2 className="font-display text-2xl font-bold text-carbon-black leading-tight mb-3">
                 {card.title}
               </h2>
-              <p className="text-[var(--color-carbon-black)] font-medium opacity-90 text-lg">
+              <p className="text-carbon-black font-medium opacity-90 text-lg">
                 {card.description}
               </p>
             </div>
@@ -137,12 +137,12 @@ const BusinessGlanse = () => {
         ))}
 
         {/* Metrics Box - taking up larger space */}
-        <div className="bento-card md:col-span-2 lg:col-span-3 brutalist-border brutalist-shadow rounded-3xl bg-[var(--color-carbon-black)] p-8 sm:p-12">
+        <div className="bento-card md:col-span-2 lg:col-span-3 brutalist-border brutalist-shadow rounded-3xl bg-carbon-black p-8 sm:p-12">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10">
-            <h3 className="font-display text-3xl font-bold text-[var(--color-sapphire)] mb-4 md:mb-0">
+            <h3 className="font-display text-3xl font-bold text-sapphire mb-4 md:mb-0">
               Live Metrics
             </h3>
-            <span className="bg-[var(--color-amber-flame)] text-[var(--color-carbon-black)] px-4 py-2 rounded-full font-bold text-sm uppercase tracking-wider brutalist-border">
+            <span className="bg-amber-flame text-carbon-black px-4 py-2 rounded-full font-bold text-sm uppercase tracking-wider brutalist-border">
               Updated just now
             </span>
           </div>
@@ -154,17 +154,17 @@ const BusinessGlanse = () => {
                 className={`rounded-2xl p-6 ${card.color} brutalist-border transform transition-transform hover:scale-105 hover:-rotate-1`}
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center border-2 border-[var(--color-carbon-black)] p-2">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center border-2 border-carbon-black p-2">
                      <img
                       src={card.image}
                       alt={card.label}
                       className="h-full w-full object-contain"
                     />
                   </div>
-                  <p className="font-display font-bold text-lg text-[var(--color-carbon-black)]">{card.label}</p>
+                  <p className="font-display font-bold text-lg text-carbon-black">{card.label}</p>
                 </div>
                 
-                <h3 className="text-4xl font-black font-display text-[var(--color-carbon-black)] tracking-tight">
+                <h3 className="text-4xl font-black font-display text-carbon-black tracking-tight">
                   {card.value}
                 </h3>
                 <p className={`mt-3 font-bold text-base ${card.subtextClass}`}>

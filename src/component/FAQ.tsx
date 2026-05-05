@@ -51,14 +51,14 @@ const FAQItem = ({ item, isOpen, onClick }: { item: any, isOpen: boolean, onClic
   }, [isOpen]);
 
   return (
-    <article className={`rounded-3xl brutalist-border transition-colors duration-300 ${isOpen ? 'bg-[var(--color-amber-flame)]' : 'bg-white hover:bg-[var(--color-platinum)]'}`}>
+    <article className={`rounded-3xl brutalist-border transition-colors duration-300 ${isOpen ? 'bg-amber-flame' : 'bg-white hover:bg-platinum'}`}>
       <button
         type="button"
         className="flex w-full items-center justify-between gap-4 p-6 sm:p-8 text-left"
         onClick={onClick}
         aria-expanded={isOpen}
       >
-        <h3 className="font-display text-2xl font-bold text-[var(--color-carbon-black)] sm:text-3xl tracking-tight">
+        <h3 className="font-display text-2xl font-bold text-carbon-black sm:text-3xl tracking-tight">
           {item.question}
         </h3>
         <div
@@ -82,7 +82,7 @@ const FAQItem = ({ item, isOpen, onClick }: { item: any, isOpen: boolean, onClic
 
       <div ref={contentRef} className="overflow-hidden h-0 opacity-0">
         <div className="p-6 sm:p-8 pt-0 border-t-2 border-[var(--color-carbon-black)]/10">
-          <p className="text-xl font-medium leading-relaxed text-[var(--color-carbon-black)] opacity-80">
+          <p className="text-xl font-medium leading-relaxed text-carbon-black opacity-80">
             {item.answer}
           </p>
         </div>
@@ -141,17 +141,17 @@ const FAQ = () => {
   return (
     <section ref={containerRef} className="mx-auto w-full max-w-4xl px-6 py-24 sm:px-8 lg:px-12">
       <div ref={headerRef} className="mx-auto text-center mb-16">
-        <h2 className="font-display text-5xl font-black text-[var(--color-carbon-black)] sm:text-6xl uppercase tracking-tighter">
+        <h2 className="font-display text-5xl font-black text-carbon-black sm:text-6xl uppercase tracking-tighter">
           Questions?
         </h2>
-        <p className="mt-4 text-2xl font-medium text-[var(--color-carbon-black)] opacity-80">
+        <p className="mt-4 text-2xl font-medium text-carbon-black opacity-80">
           Everything you need to know.
         </p>
       </div>
 
       <div className="faq-list space-y-6">
         {faqItems.map((item, index) => (
-          <div key={item.question} className="faq-item-wrap brutalist-shadow rounded-3xl bg-[var(--color-carbon-black)]">
+          <div key={item.question} className="faq-item-wrap brutalist-shadow rounded-3xl bg-carbon-black">
             <FAQItem
               item={item}
               isOpen={openIndex === index}

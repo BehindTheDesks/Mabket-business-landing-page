@@ -13,7 +13,7 @@ const reviews = [
     quote: "This app has transformed how I manage my inventory. No more lost stock or forgotten sales. My profits have increased by 30% since I started using it.",
     name: "Adebayo Johnson",
     role: "Lagos Electronics",
-    color: "bg-[var(--color-sapphire)]"
+    color: "bg-sapphire"
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const reviews = [
     quote: "Before this platform, bookkeeping was stressful and inaccurate. Now I can track every transaction in one place and make smarter business decisions.",
     name: "Nandi Mokoena",
     role: "Johannesburg Fashion Hub",
-    color: "bg-[var(--color-amber-flame)]"
+    color: "bg-amber-flame"
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const reviews = [
     quote: "I used to run out of best-selling products without notice. The alerts and stock insights help me restock on time, and my customers trust me more.",
     name: "Kwame Mensah",
     role: "Accra Home Essentials",
-    color: "bg-[var(--color-cool-horizon)]"
+    color: "bg-cool-horizon"
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const reviews = [
     quote: "Sales reports used to take me hours every weekend. Now I generate them in minutes and spend more time serving customers.",
     name: "Amina Yusuf",
     role: "Kano Beauty Supplies",
-    color: "bg-[var(--color-amber-flame)]"
+    color: "bg-amber-flame"
   },
   {
     id: 5,
@@ -53,7 +53,7 @@ const reviews = [
     quote: "I can now manage multiple shop branches from one place. It has reduced errors and helped my team stay aligned every day.",
     name: "Thandiwe Dlamini",
     role: "Durban Fresh Mart",
-    color: "bg-[var(--color-platinum)]"
+    color: "bg-platinum"
   },
 ];
 
@@ -107,11 +107,11 @@ const Review = () => {
     <section ref={containerRef} className="mx-auto w-full max-w-7xl px-6 py-24 sm:px-8 lg:px-12">
       <div ref={headerRef} className="mx-auto max-w-4xl text-center mb-16 relative">
         {/* Playful background element */}
-        <div className="absolute -top-10 -left-10 w-24 h-24 bg-[var(--color-sapphire)] rounded-full blur-2xl opacity-40 z-0"></div>
-        <h2 className="relative z-10 font-display text-5xl font-black text-[var(--color-carbon-black)] sm:text-6xl uppercase tracking-tighter">
+        <div className="absolute -top-10 -left-10 w-24 h-24 bg-sapphire rounded-full blur-2xl opacity-40 z-0"></div>
+        <h2 className="relative z-10 font-display text-5xl font-black text-carbon-black sm:text-6xl uppercase tracking-tighter">
           Loved by business owners across Africa
         </h2>
-        <p className="relative z-10 mt-6 text-2xl font-medium text-[var(--color-carbon-black)] opacity-80">
+        <p className="relative z-10 mt-6 text-2xl font-medium text-carbon-black opacity-80">
           Join thousands of entrepreneurs growing their business.
         </p>
       </div>
@@ -123,15 +123,15 @@ const Review = () => {
             className={`review-card flex flex-col justify-between rounded-[32px] brutalist-border brutalist-shadow p-8 ${review.color} transition-all duration-300 hover:-translate-y-2`}
           >
             <div>
-              <div className="text-5xl font-display text-[var(--color-carbon-black)] opacity-30 mb-4 h-8 leading-none">
+              <div className="text-5xl font-display text-carbon-black opacity-30 mb-4 h-8 leading-none">
                 &quot;
               </div>
-              <p className="text-[var(--color-carbon-black)] font-medium text-lg leading-relaxed mb-8">
+              <p className="text-carbon-black font-medium text-lg leading-relaxed mb-8">
                 {review.quote}
               </p>
             </div>
 
-            <div className="flex items-center gap-4 pt-6 border-t-2 border-[var(--color-carbon-black)]/20">
+            <div className="flex items-center gap-4 pt-6 border-t-2 border-carbon-black/20">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={review.image}
@@ -139,10 +139,10 @@ const Review = () => {
                 className="w-16 h-16 rounded-full brutalist-border object-cover bg-white"
               />
               <div>
-                <h3 className="font-display font-bold text-xl text-[var(--color-carbon-black)]">
+                <h3 className="font-display font-bold text-xl text-carbon-black">
                   {review.name}
                 </h3>
-                <p className="text-[var(--color-carbon-black)] opacity-70 font-medium text-sm">
+                <p className="text-carbon-black opacity-70 font-medium text-sm">
                   {review.role}
                 </p>
               </div>

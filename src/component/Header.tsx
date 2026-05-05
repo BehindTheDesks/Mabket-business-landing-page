@@ -120,16 +120,16 @@ const Header = () => {
   }, []);
 
   const shuffleWords = [
-    { text: "Smarter.", bg: "bg-[var(--color-sapphire)]", color: "text-[var(--color-platinum)]" },
-    { text: "Better.", bg: "bg-[var(--color-cool-horizon)]", color: "text-[var(--color-carbon-black)]" },
-    { text: "Faster.", bg: "bg-[var(--color-amber-flame)]", color: "text-[var(--color-carbon-black)]" },
+    { text: "Smarter.", bg: "bg-sapphire", color: "text-platinum" },
+    { text: "Better.", bg: "bg-cool-horizon", color: "text-carbon-black" },
+    { text: "Faster.", bg: "bg-amber-flame", color: "text-carbon-black" },
   ];
 
   return (
-    <header ref={containerRef} className="relative min-h-screen flex flex-col overflow-hidden bg-[var(--color-platinum)] pt-6">
+    <header ref={containerRef} className="relative min-h-screen flex flex-col overflow-hidden bg-platinum pt-6">
       {/* Playful background shapes */}
-      <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-[var(--color-cool-horizon)] blur-3xl opacity-50 pointer-events-none" />
-      <div className="absolute top-60 right-20 w-48 h-48 rounded-full bg-[var(--color-amber-flame)] blur-3xl opacity-50 pointer-events-none" />
+      <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-cool-horizon blur-3xl opacity-50 pointer-events-none" />
+      <div className="absolute top-60 right-20 w-48 h-48 rounded-full bg-amber-flame blur-3xl opacity-50 pointer-events-none" />
 
       {/* Navigation Bar */}
       <nav ref={navRef} className="relative z-50 mx-auto flex w-[92%] sm:w-[90%] max-w-6xl items-center justify-between rounded-full brutalist-card bg-white px-4 py-3 sm:px-6 sm:py-4">
@@ -140,10 +140,10 @@ const Header = () => {
             alt="Logo" 
             className="h-8 sm:h-12 w-auto object-contain" 
           />
-          <span className="font-display font-bold text-xl sm:text-2xl tracking-tighter">Mabket</span>
+          <span className="font-display font-bold text-xl sm:text-2xl tracking-tighter">MABKET</span>
         </div>
         <Link href="/waitlist">
-          <button className="rounded-full bg-[var(--color-amber-flame)] px-4 py-2 sm:px-8 sm:py-3 text-xs sm:text-sm font-display font-bold text-black transition-transform hover:scale-105 active:scale-95">
+          <button className="rounded-full bg-amber-flame px-4 py-2 sm:px-8 sm:py-3 text-xs sm:text-sm font-display font-bold text-black transition-transform hover:scale-105 active:scale-95">
             Join Waitlist
           </button>
         </Link>
@@ -153,7 +153,7 @@ const Header = () => {
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center mx-auto w-full max-w-6xl px-6 pt-20 pb-20 text-center">
         <h1 
           ref={textRef} 
-          className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.1] tracking-tighter text-[var(--color-carbon-black)] mb-6 uppercase flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-4"
+          className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.1] tracking-tighter text-carbon-black mb-6 uppercase flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-4"
         >
           <span className="inline-block">Manage</span>
           <span className="inline-block">Your</span>
@@ -163,7 +163,7 @@ const Header = () => {
             {shuffleWords.map((word) => (
               <span 
                 key={word.text} 
-                className={`word-card absolute top-0 left-1/2 px-3 py-1 sm:px-5 sm:py-2 rounded-full border-4 border-[var(--color-carbon-black)] ${word.bg} ${word.color} whitespace-nowrap`}
+                className={`word-card absolute top-0 left-1/2 px-3 py-1 sm:px-5 sm:py-2 rounded-full border-4 border-carbon-black ${word.bg} ${word.color} whitespace-nowrap`}
               >
                 {word.text}
               </span>
@@ -171,16 +171,16 @@ const Header = () => {
           </span>
         </h1>
 
-        <p className="mx-auto max-w-2xl text-lg sm:text-2xl font-medium text-[var(--color-carbon-black)] opacity-80 leading-relaxed mb-6 mt-3">
+        <p className="mx-auto max-w-2xl text-lg sm:text-2xl font-medium text-carbon-black opacity-80 leading-relaxed mb-6 mt-3">
           Track inventory, receive orders, and get real-time insights all in one place.
         </p>
 
         {/* Playful Free Badge */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-10 text-2xl sm:text-3xl font-black font-display tracking-tight">
-          <span className="text-[var(--color-carbon-black)] opacity-60 line-through decoration-4 sm:decoration-[6px] decoration-[var(--color-amber-flame)] -rotate-3">
+          <span className="text-carbon-black opacity-60 line-through decoration-4 sm:decoration-[6px] decoration-amber-flame -rotate-3">
             For a fee
           </span>
-          <span className="bg-[var(--color-cool-horizon)] text-[var(--color-carbon-black)] px-6 py-2 rounded-2xl brutalist-border rotate-3 shadow-[4px_4px_0px_rgba(26,26,26,1)] animate-[bounce_4s_infinite]">
+          <span className="bg-cool-horizon text-carbon-black px-6 py-2 rounded-2xl brutalist-border rotate-3 shadow-[4px_4px_0px_rgba(26,26,26,1)] animate-[bounce_4s_infinite]">
             For FREE! 🚀
           </span>
         </div>
