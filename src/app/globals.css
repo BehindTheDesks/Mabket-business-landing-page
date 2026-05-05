@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sapphire: #0052CC;
+  --color-cool-horizon: #66A9FF;
+  --color-amber-flame: #FFB800;
+  --color-carbon-black: #1A1A1A;
+  --color-platinum: #F5F7FA;
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-platinum);
+  color: var(--color-carbon-black);
+  overflow-x: hidden;
+}
+
+.brutalist-shadow {
+  box-shadow: 6px 6px 0px 0px rgba(26, 26, 26, 1);
+}
+
+.brutalist-border {
+  border: 3px solid var(--color-carbon-black);
+}
+
+.brutalist-card {
+  border: 3px solid var(--color-carbon-black);
+  box-shadow: 6px 6px 0px 0px rgba(26, 26, 26, 1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.brutalist-card:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0px 0px rgba(26, 26, 26, 1);
+}
