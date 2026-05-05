@@ -198,7 +198,6 @@ export default function WaitlistForm() {
                 className={inputClass}
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                autoFocus
               />
               <button
                 type="submit"
@@ -231,7 +230,6 @@ export default function WaitlistForm() {
                   className={inputClass}
                   value={formData.businessName}
                   onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
-                  autoFocus
                 />
                 <button
                   type="submit"
@@ -266,7 +264,6 @@ export default function WaitlistForm() {
                   className={inputClass}
                   value={formData.industry}
                   onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
-                  autoFocus
                 >
                   <option value="" disabled>Select an industry...</option>
                   <option value="Fashion">Fashion & Apparel</option>
@@ -296,7 +293,6 @@ export default function WaitlistForm() {
                     className={`${inputClass} py-2`}
                     value={formData.otherIndustry}
                     onChange={(e) => setFormData({ ...formData, otherIndustry: e.target.value })}
-                    autoFocus
                   />
                   <button
                     type="submit"
