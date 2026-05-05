@@ -172,7 +172,7 @@ export default function WaitlistForm() {
   const inputClass = "w-full rounded-2xl brutalist-border px-4 py-3 text-lg font-medium text-carbon-black outline-none focus:ring-4 focus:ring-cool-horizon transition-all";
 
   return (
-    <div className="relative mx-auto w-full max-w-md rounded-[2rem] brutalist-card bg-white p-6 sm:p-8 z-20 mb-20 text-left overflow-hidden min-h-[300px] sm:min-h-[260px] flex flex-col justify-center">
+    <div className="relative mx-auto w-[calc(100%-12px)] sm:w-full max-w-md rounded-[2rem] brutalist-card bg-white p-6 sm:p-8 z-20 mb-20 text-left overflow-hidden min-h-[300px] sm:min-h-[260px] flex flex-col justify-center">
       
       {/* Progress Bar */}
       <div className="absolute top-0 left-0 w-full h-3 bg-gray-100 border-b-2 border-[var(--color-carbon-black)]">
