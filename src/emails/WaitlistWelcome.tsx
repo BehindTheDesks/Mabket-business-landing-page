@@ -9,6 +9,7 @@ import {
   Preview,
   Text,
   Section,
+  Img,
 } from '@react-email/components';
 
 interface WaitlistWelcomeProps {
@@ -25,32 +26,57 @@ export const WaitlistWelcome = ({
       <Body style={main}>
         <Container style={container}>
           <Section style={headerSection}>
-            <Heading style={h1}>
+            <Img
+              src={`https://zddtrsz4qzisvmkh.public.blob.vercel-storage.com/mailheader.jpeg`}
+              width="600"
+              height="auto"
+              alt="MABKET Welcome"
+              style={headerImage}
+            />
+            {/* <Heading style={h1}>
               YOU&apos;RE ON <br /> THE LIST! 🚀
-            </Heading>
+            </Heading> */}
           </Section>
 
           <Section style={bodySection}>
             <Text style={text}>
-              Hey there, {businessName}!
+              Helloooooo, {businessName}!
             </Text>
             <Text style={text}>
-              Thanks for joining the MABKET waitlist. We&apos;re building the smartest business management platform for modern SMEs, and we&apos;re thrilled to have you along for the ride.
+              Thank you for signing up to be part of MABKET.
             </Text>
             <Text style={text}>
-              We&apos;ll be opening up early access soon, so keep an eye on your inbox. We promise not to spam you — only the good stuff!
+              You are among a selected group of vendors who will be testing our business management app before launch. This means you’re not just trying a new tool, you’re helping shape how vendors manage and grow their businesses in a more structured way.
             </Text>
-            
+            <Text style={text}>
+              As you begin testing, you may come across a few bugs or things that don’t work perfectly and that’s completely okay. This is exactly why we’re doing this together.
+            </Text>
+            <Text style={text}>
+              Your experience, feedback, and observations will directly help us improve and build a product that truly works for vendors like you.
+            </Text>
+            <Text style={text}>
+              We’re excited to build this with you.
+            </Text>
+{/*             
             <Section style={buttonContainer}>
-              <Link href="https://twitter.com" style={button}>
+              <Link href="https://x.com/MabketNg" style={button}>
                 Join the Community
               </Link>
-            </Section>
+            </Section> */}
 
             <Text style={footerText}>
-              Stay awesome, <br />
-              The MABKET Team
+              — Team MABKET
             </Text>
+          </Section>
+
+          <Section style={footerSection}>
+            <Img
+              src={`https://zddtrsz4qzisvmkh.public.blob.vercel-storage.com/mailfooter.jpeg`}
+              width="600"
+              height="auto"
+              alt="MABKET Footer"
+              style={footerImage}
+            />
           </Section>
         </Container>
       </Body>
@@ -80,9 +106,14 @@ const container = {
 
 const headerSection = {
   backgroundColor: '#FF6B35', // Amber Flame
-  padding: '40px 20px',
-  borderBottom: '4px solid #1A1A1A',
   textAlign: 'center' as const,
+  lineHeight: '0',
+};
+
+const headerImage = {
+  width: '100%',
+  maxWidth: '600px',
+  display: 'block',
 };
 
 const h1 = {
@@ -134,4 +165,15 @@ const footerText = {
   fontWeight: 'bold',
   margin: '0',
   opacity: '0.8',
+};
+
+const footerSection = {
+  textAlign: 'center' as const,
+  lineHeight: '0',
+};
+
+const footerImage = {
+  width: '100%',
+  maxWidth: '600px',
+  display: 'block',
 };

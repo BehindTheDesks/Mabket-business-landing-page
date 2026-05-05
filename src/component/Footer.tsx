@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FaFacebookF, FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaXTwitter, FaTiktok } from "react-icons/fa6";
 import WaitlistForm from "./WaitlistForm";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -126,14 +126,17 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 order-1 sm:order-2">
             <span className="font-display font-bold text-lg md:text-xl uppercase tracking-widest text-amber-flame">Follow Us</span>
             <div className="flex gap-4">
-              <a href="#" target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-cool-horizon text-carbon-black border-2 border-platinum shadow-[4px_4px_0px_rgba(245,247,250,1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[6px_6px_0px_rgba(245,247,250,1)] active:translate-x-1 active:translate-y-1 active:shadow-none rotate-[-3deg] hover:rotate-0">
+              <a href="https://web.facebook.com/profile.php?id=61557256204781" target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-cool-horizon text-carbon-black border-2 border-platinum shadow-[4px_4px_0px_rgba(245,247,250,1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[6px_6px_0px_rgba(245,247,250,1)] active:translate-x-1 active:translate-y-1 active:shadow-none rotate-[-3deg] hover:rotate-0">
                 <FaFacebookF className="w-6 h-6" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-amber-flame text-carbon-black border-2 border-platinum shadow-[4px_4px_0px_rgba(245,247,250,1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[6px_6px_0px_rgba(245,247,250,1)] active:translate-x-1 active:translate-y-1 active:shadow-none rotate-[2deg] hover:rotate-0">
+              <a href="https://www.instagram.com/mabket_ng/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-amber-flame text-carbon-black border-2 border-platinum shadow-[4px_4px_0px_rgba(245,247,250,1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[6px_6px_0px_rgba(245,247,250,1)] active:translate-x-1 active:translate-y-1 active:shadow-none rotate-[2deg] hover:rotate-0">
                 <FaInstagram className="w-6 h-6" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-sapphire text-platinum border-2 border-platinum shadow-[4px_4px_0px_rgba(245,247,250,1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[6px_6px_0px_rgba(245,247,250,1)] active:translate-x-1 active:translate-y-1 active:shadow-none rotate-[-5deg] hover:rotate-0">
+              <a href="https://x.com/MabketNg" target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-sapphire text-platinum border-2 border-platinum shadow-[4px_4px_0px_rgba(245,247,250,1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[6px_6px_0px_rgba(245,247,250,1)] active:translate-x-1 active:translate-y-1 active:shadow-none rotate-[-5deg] hover:rotate-0">
                 <FaXTwitter className="w-6 h-6" />
+              </a>
+              <a href="https://www.tiktok.com/@mabket.ng" target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-amber-flame text-carbon-black border-2 border-platinum shadow-[4px_4px_0px_rgba(245,247,250,1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[6px_6px_0px_rgba(245,247,250,1)] active:translate-x-1 active:translate-y-1 active:shadow-none rotate-[2deg] hover:rotate-0">
+                <FaTiktok className="w-6 h-6" />
               </a>
             </div>
           </div>
