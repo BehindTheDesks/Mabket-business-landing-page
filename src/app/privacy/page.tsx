@@ -1,7 +1,11 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | MABKET",
+  description: "Learn how MABKET handles and protects your business data and personal information.",
+};
 
 export default function PrivacyPolicyPage() {
   const lastUpdated = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });

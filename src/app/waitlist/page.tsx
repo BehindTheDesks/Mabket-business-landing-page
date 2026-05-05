@@ -1,6 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import WaitlistForm from "../../component/WaitlistForm";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Join the Waitlist | MABKET",
+  description: "Secure your spot for early access to MABKET. Be the first to experience the smartest business management platform for SMEs.",
+};
 
 export default function WaitlistPage() {
   return (

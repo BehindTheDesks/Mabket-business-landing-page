@@ -1,6 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import WaitlistForm from "../../component/WaitlistForm";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Pricing | MABKET - It's Free!",
+  description: "Check out our pricing. Spoiler alert: It's free for now! Join the waitlist and get early access.",
+};
 
 export default function PricingPage() {
   return (
