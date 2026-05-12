@@ -3,73 +3,59 @@ import {
   Body,
   Container,
   Head,
-  Heading,
   Html,
-  Link,
   Preview,
   Text,
   Section,
+  Hr,
   Img,
 } from '@react-email/components';
 
 interface WaitlistWelcomeProps {
-  businessName?: string;
+  firstName?: string;
 }
 
 export const WaitlistWelcome = ({
-  businessName = 'Founder',
+  firstName = 'there',
 }: WaitlistWelcomeProps) => {
   return (
     <Html>
       <Head />
-      <Preview>You&apos;re on the list! 🎉</Preview>
+      <Preview>You&apos;re in. Let&apos;s get to work.</Preview>
       <Body style={main}>
         <Container style={container}>
-          <Section style={headerSection}>
-            <Img
-              src={`https://zddtrsz4qzisvmkh.public.blob.vercel-storage.com/mailheader.jpeg`}
-              width="600"
-              height="auto"
-              alt="MABKET Welcome"
-              style={headerImage}
-            />
-            {/* <Heading style={h1}>
-              YOU&apos;RE ON <br /> THE LIST! 🚀
-            </Heading> */}
+          <Section style={header}>
+            <Text style={logo}>mabket.</Text>
+          </Section>
+          
+          <Text style={text}>
+            Hey {firstName},
+          </Text>
+          <Text style={text}>
+            Welcome to mabket.
+          </Text>
+          <Text style={text}>
+            Not everyone gets here first — you do. You&apos;re part of the group testing mabket before the rest of the world sees it, which means your feedback actually shapes what this becomes.
+          </Text>
+          <Text style={text}>
+            Expect a few rough edges. That&apos;s the point. We&apos;re building this in the open, with vendors like you, not in a boardroom somewhere.
+          </Text>
+          <Text style={text}>
+            Tell us what&apos;s broken. Tell us what&apos;s missing. We&apos;re listening.
+          </Text>
+          
+          <Section style={signOff}>
+            <Text style={text}>
+              — Rose, mabket
+            </Text>
           </Section>
 
-          <Section style={bodySection}>
-            <Text style={text}>
-              Helloooooo, {businessName}!
-            </Text>
-            <Text style={text}>
-              Thank you for signing up to be part of MABKET.
-            </Text>
-            <Text style={text}>
-              You are among a selected group of vendors who will be testing our business management app before launch. This means you’re not just trying a new tool, you’re helping shape how vendors manage and grow their businesses in a more structured way.
-            </Text>
-            <Text style={text}>
-              As you begin testing, you may come across a few bugs or things that don’t work perfectly and that’s completely okay. This is exactly why we’re doing this together.
-            </Text>
-            <Text style={text}>
-              Your experience, feedback, and observations will directly help us improve and build a product that truly works for vendors like you.
-            </Text>
-            <Text style={text}>
-              We’re excited to build this with you.
-            </Text>
-{/*             
-            <Section style={buttonContainer}>
-              <Link href="https://x.com/MabketNg" style={button}>
-                Join the Community
-              </Link>
-            </Section> */}
+          <Hr style={hr} />
 
+          <Section style={footer}>
             <Text style={footerText}>
-              — Team MABKET
+              You are receiving this email because you signed up for the mabket waitlist.
             </Text>
-          </Section>
-
-          <Section style={footerSection}>
             <Img
               src={`https://zddtrsz4qzisvmkh.public.blob.vercel-storage.com/mailfooter.jpeg`}
               width="600"
@@ -89,91 +75,63 @@ export default WaitlistWelcome;
 // Styles
 
 const main = {
-  backgroundColor: '#F5F7FA', // Platinum
-  fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif',
+  backgroundColor: '#ffffff',
+  fontFamily:
+    '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
 };
 
 const container = {
-  backgroundColor: '#ffffff',
   margin: '40px auto',
-  padding: '0',
-  borderRadius: '24px',
-  border: '4px solid #1A1A1A', // Carbon Black
-  boxShadow: '8px 8px 0px rgba(26,26,26,1)',
-  maxWidth: '600px',
-  overflow: 'hidden',
+  padding: '32px 32px 24px',
+  maxWidth: '560px',
+  border: '1px solid #eaeaea',
+  borderRadius: '8px',
 };
 
-const headerSection = {
-  backgroundColor: '#FF6B35', // Amber Flame
-  textAlign: 'center' as const,
-  lineHeight: '0',
-};
-
-const headerImage = {
-  width: '100%',
-  maxWidth: '600px',
-  display: 'block',
-};
-
-const h1 = {
-  color: '#1A1A1A',
-  fontSize: '36px',
-  fontWeight: '900',
-  lineHeight: '1.2',
-  margin: '0',
-  textTransform: 'uppercase' as const,
-  letterSpacing: '-1px',
-};
-
-const bodySection = {
-  padding: '40px',
-};
-
-const text = {
-  color: '#1A1A1A',
-  fontSize: '18px',
-  lineHeight: '1.5',
-  fontWeight: '500',
-  margin: '0 0 20px 0',
-};
-
-const buttonContainer = {
-  textAlign: 'center' as const,
-  marginTop: '32px',
+const header = {
   marginBottom: '32px',
 };
 
-const button = {
-  backgroundColor: '#004E89', // Sapphire
-  color: '#ffffff',
-  fontSize: '18px',
+const logo = {
+  fontSize: '24px',
   fontWeight: 'bold',
-  textDecoration: 'none',
-  padding: '16px 32px',
-  borderRadius: '16px',
-  border: '4px solid #1A1A1A',
-  boxShadow: '4px 4px 0px rgba(26,26,26,1)',
-  display: 'inline-block',
-  textTransform: 'uppercase' as const,
+  letterSpacing: '-1px',
+  color: '#111111',
+  margin: '0',
+};
+
+const text = {
+  color: '#333333',
+  fontSize: '16px',
+  lineHeight: '26px',
+  margin: '0 0 20px 0',
+};
+
+const signOff = {
+  marginTop: '32px',
+};
+
+const hr = {
+  borderColor: '#eaeaea',
+  margin: '32px 0 24px 0',
+  borderWidth: '1px',
+};
+
+const footer = {
+  marginBottom: '0',
 };
 
 const footerText = {
-  color: '#1A1A1A',
-  fontSize: '16px',
+  color: '#888888',
+  fontSize: '12px',
   lineHeight: '1.5',
-  fontWeight: 'bold',
   margin: '0',
-  opacity: '0.8',
-};
-
-const footerSection = {
-  textAlign: 'center' as const,
-  lineHeight: '0',
 };
 
 const footerImage = {
   width: '100%',
   maxWidth: '600px',
   display: 'block',
+  marginTop: '24px',
+  borderRadius: '8px',
 };

@@ -17,8 +17,8 @@ export async function POST(req: Request) {
     const data = await resend.emails.send({
       from: `MABKET Waitlist <${fromEmail}>`,
       to: email,
-      subject: "You're on the list! 🎉",
-      react: WaitlistWelcome({ businessName }),
+      subject: "You're in. Let's get to work.",
+      react: WaitlistWelcome({ firstName: businessName }),
     });
 
     if (data.error) {
