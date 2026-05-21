@@ -12,13 +12,25 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Email is required' }, { status: 400 });
     }
 
-    const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
+    // Must be a verified domain in Resend, ideally a person (e.g., rose@mabket.com)
+    const fromEmail = process.env.RESEND_FROM_EMAIL; 
+
+    if (!fromEmail) {
+      console.error('Missing RESEND_FROM_EMAIL environment variable');
+      return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
+    }
+
+    const encodedEmail = encodeURIComponent(email);
+    // Page shown to the user when they click Unsubscribe in the email
+    const unsubscribeUrl = `https://mabket.app/unsubscribe?email=${encodedEmail}`;
 
     const data = await resend.emails.send({
-      from: `MABKET Waitlist <${fromEmail}>`,
+      from: `Rose at mabket <${fromEmail}>`,
       to: email,
-      subject: "You're in. Let's get to work.",
-      react: WaitlistWelcome({ firstName: businessName }),
+      subject: `hey, it's Rose from mabket`,
+      replyTo: fromEmail,
+      react: WaitlistWelcome({ firstName: businessName, unsubscribeUrl }),
+      text: `Hey ${businessName},\n\nThanks for joining the mabket waitlist.\n\nNot everyone gets early access — you're part of a small group we're onboarding before we launch to the public. This means your feedback will directly shape what we build.\n\nExpect a few rough edges. We're building this in the open alongside vendors like you, not behind closed doors.\n\nIf you have any questions or find anything broken, just hit reply and let me know. I'm listening.\n\nBest,\nRose\n\nP.S. I only want to send updates you actually care about. If you'd rather not hear from me again, no worries at all — you can unsubscribe here: ${unsubscribeUrl}`,
     });
 
     if (data.error) {
