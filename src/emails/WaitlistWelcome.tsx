@@ -51,7 +51,7 @@ export const WaitlistWelcome = ({
           </Text>
 
           <div style={signatureBlock}>
-            <Text style={signatureName}>— Rose Eke</Text>
+            <Text style={signatureName}>— Rose</Text>
             <Text style={signatureTitle}>Founder, mabket</Text>
           </div>
 
