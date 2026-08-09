@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AppLinks from "./AppLinks";
@@ -120,6 +119,19 @@ const Header = () => {
     return () => ctx.revert();
   }, []);
 
+  const handleGetStarted = () => {
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const isAndroid = /Android/.test(navigator.userAgent);
+
+    if (isIOS) {
+      window.open("https://apps.apple.com/ng/app/mabket/id6785292328", "_blank");
+    } else if (isAndroid) {
+      window.open("https://play.google.com/store/apps/details?id=com.mabketbusiness.mabketvendor", "_blank");
+    } else {
+      document.getElementById("app-download")?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const shuffleWords = [
     { text: "Smarter.", bg: "bg-sapphire", color: "text-platinum" },
     { text: "Better.", bg: "bg-cool-horizon", color: "text-carbon-black" },
@@ -143,11 +155,9 @@ const Header = () => {
           />
           <span className="font-display font-bold text-xl sm:text-2xl tracking-tighter">MABKET</span>
         </div>
-        <Link href="/waitlist">
-          <button className="rounded-full bg-amber-flame px-4 py-2 sm:px-8 sm:py-3 text-xs sm:text-sm font-display font-bold text-black transition-transform hover:scale-105 active:scale-95">
-            Get Started
-          </button>
-        </Link>
+        <button onClick={handleGetStarted} className="rounded-full bg-amber-flame px-4 py-2 sm:px-8 sm:py-3 text-xs sm:text-sm font-display font-bold text-black transition-transform hover:scale-105 active:scale-95">
+          Get Started
+        </button>
       </nav>
 
       {/* Hero Content */}
@@ -186,7 +196,9 @@ const Header = () => {
           </span>
         </div>
 
-       <AppLinks/>
+       <div id="app-download">
+         <AppLinks/>
+       </div>
 
         {/* Phone Screen Preview */}
        
