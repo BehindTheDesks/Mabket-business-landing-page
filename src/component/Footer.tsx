@@ -5,7 +5,7 @@ import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaFacebookF, FaInstagram, FaXTwitter, FaTiktok } from "react-icons/fa6";
-import WaitlistForm from "./WaitlistForm";
+import AppLinks from "./AppLinks";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,19 +44,22 @@ const Footer = () => {
       <div className="absolute top-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-cool-horizon rounded-full blur-[80px] md:blur-[120px] opacity-20 pointer-events-none"></div>
 
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 lg:px-12 py-12 md:py-20 relative z-10">
-        {/* Newsletter Section */}
+        {/* Download CTA Section */}
         <div className="flex flex-col gap-10 border-b-2 border-[var(--color-platinum)]/20 pb-12 md:pb-20 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex-1 text-center lg:text-left">
             <h2 ref={titleRef} className="font-display text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tighter text-amber-flame leading-none">
-              Secure Your Spot
+              Download the App
             </h2>
             <p className="mt-4 md:mt-6 max-w-2xl text-lg sm:text-xl md:text-2xl font-medium opacity-90 text-platinum mx-auto lg:mx-0">
-              Early access is closing soon. Don&apos;t let your competitors get ahead. Drop your details to get on the waitlist now!
+              Keep track of your business effortlessly. Manage orders, inventory, and finances — right from your pocket.
+            </p>
+            <p className="mt-2 text-base sm:text-lg opacity-60 text-platinum mx-auto lg:mx-0">
+              Available on iOS and Android.
             </p>
           </div>
 
           <div className="w-full max-w-lg shrink-0 mx-auto lg:mx-0 px-2 sm:px-0">
-            <WaitlistForm />
+            <AppLinks />
           </div>
         </div>
 

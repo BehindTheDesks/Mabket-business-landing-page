@@ -21,7 +21,7 @@ export default function Page() {
             <span className="text-[var(--color-sapphire)]">Business</span>?
           </h2>
           <p className="text-xl sm:text-2xl font-medium opacity-80 mb-12 max-w-2xl">
-            Don&apos;t get left behind. Join the exclusive waitlist and be the first to experience the future of business management.
+            Join our mailing list to get early access to feature updates straight to your inbox.
           </p>
           <div className="w-full max-w-lg">
             <WaitlistForm />

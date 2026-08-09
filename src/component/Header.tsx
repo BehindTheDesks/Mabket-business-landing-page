@@ -4,7 +4,8 @@ import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import WaitlistForm from "./WaitlistForm";
+import AppLinks from "./AppLinks";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -144,7 +145,7 @@ const Header = () => {
         </div>
         <Link href="/waitlist">
           <button className="rounded-full bg-amber-flame px-4 py-2 sm:px-8 sm:py-3 text-xs sm:text-sm font-display font-bold text-black transition-transform hover:scale-105 active:scale-95">
-            Join Waitlist
+            Get Started
           </button>
         </Link>
       </nav>
@@ -185,20 +186,7 @@ const Header = () => {
           </span>
         </div>
 
-       {/* CTA Buttons */}
-        {/* <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-20 z-20 relative">
-          <button className="flex items-center gap-3 rounded-full bg-[var(--color-sapphire)] px-8 py-4 font-display font-bold text-[var(--color-carbon-black)] brutalist-shadow border-2 border-[var(--color-carbon-black)] transition-transform hover:-translate-y-1 active:translate-y-1">
-            <img src="/image/Vector.png" alt="" className="h-5 w-5" aria-hidden="true" />
-            Get on iOS
-          </button>
-          <button className="flex items-center gap-3 rounded-full bg-white px-8 py-4 font-display font-bold text-[var(--color-carbon-black)] brutalist-shadow border-2 border-[var(--color-carbon-black)] transition-transform hover:-translate-y-1 active:translate-y-1">
-            <img src="/image/Vector1.png" alt="" className="h-5 w-5" aria-hidden="true" />
-            Get on Android
-          </button>
-        </div> */}
-
-        {/* Waitlist Gamified Form */}
-        <WaitlistForm />
+       <AppLinks/>
 
         {/* Phone Screen Preview */}
        
