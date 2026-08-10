@@ -9,51 +9,51 @@ gsap.registerPlugin(ScrollTrigger);
 const reviews = [
   {
     id: 1,
-    image: "/image/Ellipse10.png",
-    quote: "This app has transformed how I manage my inventory. No more lost stock or forgotten sales. My profits have increased by 30% since I started using it.",
-    name: "Adebayo Johnson",
-    role: "Lagos Electronics",
-    color: "bg-sapphire"
+    image: "/image/elite_wears_logo.png",
+    quote: "MABKET simplified how we run Elitewears. We see our sales data in a more structured manner.",
+    name: "Yemi",
+    role: " CMO, Elitewears",
+    color: "bg-platinum"
   },
   {
     id: 2,
-    image: "/image/Ellipse9.png",
-    quote: "Before this platform, bookkeeping was stressful and inaccurate. Now I can track every transaction in one place and make smarter business decisions.",
-    name: "Nandi Mokoena",
-    role: "Johannesburg Fashion Hub",
+    image: "/image/morry.png",
+    quote: "I enjoy the storefront link integration. This has helped me to have a catalog to share with my customers.",
+    name: "Anthonia",
+    role: "CEO, Morry",
     color: "bg-amber-flame"
   },
   {
     id: 3,
-    image: "/image/Ellipse11.png",
-    quote: "I used to run out of best-selling products without notice. The alerts and stock insights help me restock on time, and my customers trust me more.",
-    name: "Kwame Mensah",
-    role: "Accra Home Essentials",
-    color: "bg-cool-horizon"
+    image: "/image/estorae_logo.png",
+    quote: "Knowing that the app can allow me see how much I am making from my business is so cool.",
+    name: "Bolaji ",
+    role: " CEO, Estorae",
+    color: "bg-cool-gray"
   },
   {
     id: 4,
     image: "/image/Ellipse10.png",
-    quote: "Sales reports used to take me hours every weekend. Now I generate them in minutes and spend more time serving customers.",
-    name: "Amina Yusuf",
-    role: "Kano Beauty Supplies",
+    quote: "MABKET made invoicing so much easier for Ziva Aesthetics. I create invoices for my clients right in the app, track orders and inventory, and see my profit. It has simplified how I run the business.",
+    name: "Bolaji",
+    role: "CEO, Ziva Aesthetics",
     color: "bg-amber-flame"
   },
   {
     id: 5,
-    image: "/image/Ellipse9.png",
-    quote: "The dashboard gives me a clear picture of what is selling and what is not. I finally have control over my stock flow.",
-    name: "Peter Okafor",
-    role: "Abuja Mobile Accessories",
+    image: "/image/iyi_logo.png",
+    quote: "MABKET made it so easy to stay connected with my customers. I send broadcast messages to update them all at once about new arrivals and promos. It's simplified how I run IYI Fashion.",
+    name: "Busayo",
+    role: "CEO, IYI",
     color: "bg-white"
   },
   {
     id: 6,
-    image: "/image/Ellipse11.png",
-    quote: "I can now manage multiple shop branches from one place. It has reduced errors and helped my team stay aligned every day.",
-    name: "Thandiwe Dlamini",
-    role: "Durban Fresh Mart",
-    color: "bg-platinum"
+    image: "/image/ella_logo.png",
+    quote: "Creating and sending invoices used to take up so much of my time. With MABKET, I create and send invoices to my customers right from the app, while also tracking my orders, inventory, and profit. All in one place.",
+    name: "Precious",
+    role: "CEO, Ellasbakeshop",
+    color: "bg-amber-flame"
   },
 ];
 
