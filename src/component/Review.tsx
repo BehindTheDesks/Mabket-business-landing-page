@@ -16,14 +16,6 @@ const reviews = [
     color: "bg-platinum"
   },
   {
-    id: 2,
-    image: "/image/morry.png",
-    quote: "I enjoy the storefront link integration. This has helped me to have a catalog to share with my customers.",
-    name: "Anthonia",
-    role: "CEO, Morry",
-    color: "bg-amber-flame"
-  },
-  {
     id: 3,
     image: "/image/estorae_logo.png",
     quote: "Knowing that the app can allow me see how much I am making from my business is so cool.",
@@ -55,6 +47,14 @@ const reviews = [
     role: "CEO, Ellasbakeshop",
     color: "bg-amber-flame"
   },
+  {
+    id: 2,
+    image: "/image/morry.png",
+    quote: "I enjoy the storefront link integration. This has helped me to have a catalog to share with my customers.",
+    name: "Anthonia",
+    role: "CEO, Morry",
+    color: "bg-amber-flame"
+  }
 ];
 
 const Review = () => {
