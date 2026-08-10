@@ -16,12 +16,36 @@ const reviews = [
     color: "bg-platinum"
   },
   {
+    id: 2,
+    image: "/image/morry.png",
+    quote: "I enjoy the storefront link integration. This has helped me to have a catalog to share with my customers.",
+    name: "Anthonia",
+    role: "CEO, Morry",
+    color: "bg-amber-flame"
+  },
+  {
     id: 3,
     image: "/image/estorae_logo.png",
     quote: "Knowing that the app can allow me see how much I am making from my business is so cool.",
     name: "Bolaji ",
     role: " CEO, Estorae",
     color: "bg-cool-gray"
+  },
+  {
+    id: 5,
+    image: "/image/iyi_logo.png",
+    quote: "MABKET made it so easy to stay connected with my customers. I send broadcast messages to update them all at once about new arrivals and promos. It's simplified how I run IYI Fashion.",
+    name: "Busayo",
+    role: "CEO, IYI",
+    color: "bg-amber-flame"
+  },
+  {
+    id: 6,
+    image: "/image/ella_logo.png",
+    quote: "Creating and sending invoices used to take up so much of my time. With MABKET, I create and send invoices to my customers right from the app, while also tracking my orders, inventory, and profit. All in one place.",
+    name: "Precious",
+    role: "CEO, Ellasbakeshop",
+    color: "bg-platinum"
   },
   {
     id: 4,
@@ -31,30 +55,6 @@ const reviews = [
     role: "CEO, Ziva Aesthetics",
     color: "bg-amber-flame"
   },
-  {
-    id: 5,
-    image: "/image/iyi_logo.png",
-    quote: "MABKET made it so easy to stay connected with my customers. I send broadcast messages to update them all at once about new arrivals and promos. It's simplified how I run IYI Fashion.",
-    name: "Busayo",
-    role: "CEO, IYI",
-    color: "bg-white"
-  },
-  {
-    id: 6,
-    image: "/image/ella_logo.png",
-    quote: "Creating and sending invoices used to take up so much of my time. With MABKET, I create and send invoices to my customers right from the app, while also tracking my orders, inventory, and profit. All in one place.",
-    name: "Precious",
-    role: "CEO, Ellasbakeshop",
-    color: "bg-amber-flame"
-  },
-  {
-    id: 2,
-    image: "/image/morry.png",
-    quote: "I enjoy the storefront link integration. This has helped me to have a catalog to share with my customers.",
-    name: "Anthonia",
-    role: "CEO, Morry",
-    color: "bg-amber-flame"
-  }
 ];
 
 const Review = () => {
